@@ -1,0 +1,46 @@
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+
+# Python environments, build, and test artifacts
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+*.egg-info/
+build/
+dist/
+
+# Application-generated data and exports (may contain sensitive information)
+outputs/
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# Local Codex and diagnostic artifacts
+.codex_tmp/
+.deepeval/
+.pytest-codex-run/
+.pytest-tmp/
