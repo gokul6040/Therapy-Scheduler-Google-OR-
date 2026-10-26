@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanal · Parent response demo</title>
+  <link rel="stylesheet" href="/response_demo.css">
+  <script defer src="/response_demo.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a href="/" class="brand"><span class="brand-mark">t.</span><span>thanal<span class="brand-sub">EIC THERAPY SCHEDULER</span></span></a>
+    <div class="sidebar-label">WORKSPACE</div>
+    <div class="sidebar-item"><span>◈</span> Parent response lab</div>
+    <div class="sidebar-note"><span class="dot"></span> Fictional data only<p>Explore how parent availability changes a day's appointments.</p></div>
+    <div class="sidebar-bottom">DAILY PLANNING<br><strong>One day at a time.<br>The whole week in view.</strong></div>
+  </aside>
+  <main>
+    <div class="topline"><span>Scheduling / <strong>Parent response demo</strong></span><span class="tag">LOCAL SIMULATION</span></div>
+    <header>
+      <div><div class="eyebrow">FROM PARENT REPLY TO A BETTER SCHEDULE</div><h1>See Monday take shape.</h1><p>Run the scheduler on saved Yes / No replies. See who stays, who fills an opening,<br class="wide-only"> and how many sessions each child still needs this week.</p></div>
+      <div class="header-date"><span>DEMO APPOINTMENT DAY</span><strong id="target-date">Loading…</strong><small>Indian time · Asia/Kolkata</small></div>
+    </header>
+    <section id="stats" class="stats" aria-label="Dataset counts"></section>
+    <section class="run-panel">
+      <div class="run-copy"><div class="run-icon" id="run-icon">↗</div><div><h2 id="run-title">Ready to run</h2><p id="run-description">The original appointments and assumed parent replies are loaded.</p></div></div>
+      <div class="actions"><button id="reset-button" class="button secondary">Reset demo</button><button id="run-button" class="button primary">▶ &nbsp; Run scheduler</button></div>
+      <div id="run-progress" class="progress-track" hidden><div></div></div>
+    </section>
+    <div id="error" class="error" role="alert" hidden></div>
+    <section id="outcome" class="outcome" aria-live="polite" hidden></section>
+    <nav class="tabs" aria-label="Demo views">
+      <button data-tab="schedule" class="active" aria-pressed="true">Monday schedule</button>
+      <button data-tab="changes" aria-pressed="false">Released openings <span id="change-count"></span></button>
+      <button data-tab="replies" aria-pressed="false">Parent replies</button>
+      <button data-tab="weekly" aria-pressed="false">Weekly progress</button>
+      <button data-tab="alternatives" aria-pressed="false">Alternative suggestions</button>
+    </nav>
+    <section class="content-panel">
+      <div class="view-heading"><div><h2 id="view-title">Monday schedule</h2><p id="view-description"></p></div><div class="filters"><select id="branch-filter" aria-label="Filter by branch"><option value="">All branches</option></select><input id="search" type="search" placeholder="Search patient, therapy, therapist…" aria-label="Search records"></div></div>
+      <div id="view-content" aria-live="polite"></div>
+    </section>
+    <footer><span>Fictional data only. Admin reservations are confirmed locally without sending messages.</span><details><summary>Demo database</summary><code id="database-path"></code></details></footer>
+  </main>
+  <div id="reservation-toast" class="reservation-toast" role="status" hidden></div>
+  <dialog id="booking-dialog" aria-labelledby="booking-title">
+    <div class="booking-header"><div><div class="eyebrow">ADMIN RESERVATION</div><h2 id="booking-title">Reserve this opening</h2><p id="booking-subtitle"></p></div><button id="booking-close" class="dialog-close" aria-label="Close reservation">×</button></div>
+    <div id="booking-loading" class="booking-loading">Loading the patient list…</div>
+    <div id="booking-body" hidden>
+      <div class="booking-scope"><label><input type="checkbox" id="whole-visit" checked> <span id="whole-visit-label">Reserve complete continuous visit</span></label><small>You can select one slot instead. Any mismatch will appear as a warning.</small></div>
+      <div class="booking-columns">
+        <section class="patient-picker"><div class="picker-tabs"><button id="picker-all" class="active">Choose patient</button><button id="picker-suggestions">Suggested patients</button></div><input id="patient-search" type="search" placeholder="Search patient name or code…" aria-label="Search patient list"><div id="patient-results" class="patient-results"></div></section>
+        <section class="booking-review"><div id="booking-selection" class="selection-empty">Select any patient to see the booking details and warnings.</div><div id="booking-warnings"></div><div id="booking-error" class="error" role="alert" hidden></div><div class="confirmation-options"><button id="reserve-without" class="button primary" disabled>Confirm without messaging</button><button id="reserve-with" class="button secondary" disabled title="Display only; messaging is not connected">Confirm with messaging <span>Coming later</span></button><p>Without messaging reserves the spot immediately. No WhatsApp or Zoho request is sent.</p></div></section>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

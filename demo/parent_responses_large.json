@@ -1,0 +1,2607 @@
+{
+  "target_date": "2026-10-19",
+  "description": "Fictional 80-patient simulation; No means whole-day unavailability in this fixture.",
+  "departments": [
+    "Speech",
+    "Occupational Therapy",
+    "Physiotherapy"
+  ],
+  "locations": [
+    {
+      "name": "Demo North",
+      "capacity": 6
+    },
+    {
+      "name": "Demo South",
+      "capacity": 6
+    }
+  ],
+  "therapists": [
+    {
+      "code": "DEMO-T01",
+      "name": "Demo Therapist 01",
+      "therapy": "Speech",
+      "branch": "Demo North"
+    },
+    {
+      "code": "DEMO-T02",
+      "name": "Demo Therapist 02",
+      "therapy": "Occupational Therapy",
+      "branch": "Demo North"
+    },
+    {
+      "code": "DEMO-T03",
+      "name": "Demo Therapist 03",
+      "therapy": "Physiotherapy",
+      "branch": "Demo North"
+    },
+    {
+      "code": "DEMO-T04",
+      "name": "Demo Therapist 04",
+      "therapy": "Speech",
+      "branch": "Demo North"
+    },
+    {
+      "code": "DEMO-T05",
+      "name": "Demo Therapist 05",
+      "therapy": "Occupational Therapy",
+      "branch": "Demo North"
+    },
+    {
+      "code": "DEMO-T06",
+      "name": "Demo Therapist 06",
+      "therapy": "Physiotherapy",
+      "branch": "Demo North"
+    },
+    {
+      "code": "DEMO-T07",
+      "name": "Demo Therapist 07",
+      "therapy": "Speech",
+      "branch": "Demo South"
+    },
+    {
+      "code": "DEMO-T08",
+      "name": "Demo Therapist 08",
+      "therapy": "Occupational Therapy",
+      "branch": "Demo South"
+    },
+    {
+      "code": "DEMO-T09",
+      "name": "Demo Therapist 09",
+      "therapy": "Physiotherapy",
+      "branch": "Demo South"
+    },
+    {
+      "code": "DEMO-T10",
+      "name": "Demo Therapist 10",
+      "therapy": "Speech",
+      "branch": "Demo South"
+    },
+    {
+      "code": "DEMO-T11",
+      "name": "Demo Therapist 11",
+      "therapy": "Occupational Therapy",
+      "branch": "Demo South"
+    },
+    {
+      "code": "DEMO-T12",
+      "name": "Demo Therapist 12",
+      "therapy": "Physiotherapy",
+      "branch": "Demo South"
+    }
+  ],
+  "patients": [
+    {
+      "code": "DEMO-001",
+      "name": "Demo Child 001",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-002",
+      "name": "Demo Child 002",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-003",
+      "name": "Demo Child 003",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-004",
+      "name": "Demo Child 004",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-005",
+      "name": "Demo Child 005",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-006",
+      "name": "Demo Child 006",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-007",
+      "name": "Demo Child 007",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-008",
+      "name": "Demo Child 008",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-009",
+      "name": "Demo Child 009",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-010",
+      "name": "Demo Child 010",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-011",
+      "name": "Demo Child 011",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-012",
+      "name": "Demo Child 012",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-013",
+      "name": "Demo Child 013",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-014",
+      "name": "Demo Child 014",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T01",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T02",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-015",
+      "name": "Demo Child 015",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-016",
+      "name": "Demo Child 016",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-017",
+      "name": "Demo Child 017",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-018",
+      "name": "Demo Child 018",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-019",
+      "name": "Demo Child 019",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-020",
+      "name": "Demo Child 020",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T03",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-021",
+      "name": "Demo Child 021",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-022",
+      "name": "Demo Child 022",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-023",
+      "name": "Demo Child 023",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-024",
+      "name": "Demo Child 024",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-025",
+      "name": "Demo Child 025",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-026",
+      "name": "Demo Child 026",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-027",
+      "name": "Demo Child 027",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-028",
+      "name": "Demo Child 028",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-029",
+      "name": "Demo Child 029",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-030",
+      "name": "Demo Child 030",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-031",
+      "name": "Demo Child 031",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-032",
+      "name": "Demo Child 032",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-033",
+      "name": "Demo Child 033",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-034",
+      "name": "Demo Child 034",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T04",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T05",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-035",
+      "name": "Demo Child 035",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-036",
+      "name": "Demo Child 036",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-037",
+      "name": "Demo Child 037",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-038",
+      "name": "Demo Child 038",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-039",
+      "name": "Demo Child 039",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-040",
+      "name": "Demo Child 040",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T06",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-041",
+      "name": "Demo Child 041",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-042",
+      "name": "Demo Child 042",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-043",
+      "name": "Demo Child 043",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-044",
+      "name": "Demo Child 044",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-045",
+      "name": "Demo Child 045",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-046",
+      "name": "Demo Child 046",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-047",
+      "name": "Demo Child 047",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-048",
+      "name": "Demo Child 048",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-049",
+      "name": "Demo Child 049",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-050",
+      "name": "Demo Child 050",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-051",
+      "name": "Demo Child 051",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-052",
+      "name": "Demo Child 052",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-053",
+      "name": "Demo Child 053",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-054",
+      "name": "Demo Child 054",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T07",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T08",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-055",
+      "name": "Demo Child 055",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-056",
+      "name": "Demo Child 056",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-057",
+      "name": "Demo Child 057",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-058",
+      "name": "Demo Child 058",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-059",
+      "name": "Demo Child 059",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-060",
+      "name": "Demo Child 060",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T09",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-061",
+      "name": "Demo Child 061",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-062",
+      "name": "Demo Child 062",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-063",
+      "name": "Demo Child 063",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-064",
+      "name": "Demo Child 064",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-065",
+      "name": "Demo Child 065",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-066",
+      "name": "Demo Child 066",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-067",
+      "name": "Demo Child 067",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-068",
+      "name": "Demo Child 068",
+      "active": true,
+      "notes": "Original Monday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-069",
+      "name": "Demo Child 069",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-070",
+      "name": "Demo Child 070",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-071",
+      "name": "Demo Child 071",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-072",
+      "name": "Demo Child 072",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-073",
+      "name": "Demo Child 073",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-074",
+      "name": "Demo Child 074",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Speech",
+          "therapist": "DEMO-T10",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        },
+        {
+          "therapy": "Occupational Therapy",
+          "therapist": "DEMO-T11",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-075",
+      "name": "Demo Child 075",
+      "active": true,
+      "notes": "Weekly target already booked",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-076",
+      "name": "Demo Child 076",
+      "active": true,
+      "notes": "One existing Tuesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-077",
+      "name": "Demo Child 077",
+      "active": true,
+      "notes": "One existing Wednesday visit",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 3,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-078",
+      "name": "Demo Child 078",
+      "active": true,
+      "notes": "Plan starts next week",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-26",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-079",
+      "name": "Demo Child 079",
+      "active": false,
+      "notes": "Inactive patient",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    },
+    {
+      "code": "DEMO-080",
+      "name": "Demo Child 080",
+      "active": true,
+      "notes": "Available replacement candidate",
+      "requirements": [
+        {
+          "therapy": "Physiotherapy",
+          "therapist": "DEMO-T12",
+          "sessions_per_week": 2,
+          "plan_start_date": "2026-10-19",
+          "duration_months": 6
+        }
+      ]
+    }
+  ],
+  "appointments": [
+    {
+      "key": "DEMO-001-D0-S0-0",
+      "bundle": "DEMO-001-D0-S0",
+      "patient": "DEMO-001",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-001-D0-S0-1",
+      "bundle": "DEMO-001-D0-S0",
+      "patient": "DEMO-001",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 1,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-002-D0-S2-0",
+      "bundle": "DEMO-002-D0-S2",
+      "patient": "DEMO-002",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-002-D0-S2-1",
+      "bundle": "DEMO-002-D0-S2",
+      "patient": "DEMO-002",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 3,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-003-D0-S5-0",
+      "bundle": "DEMO-003-D0-S5",
+      "patient": "DEMO-003",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-003-D0-S5-1",
+      "bundle": "DEMO-003-D0-S5",
+      "patient": "DEMO-003",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 6,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-004-D0-S7-0",
+      "bundle": "DEMO-004-D0-S7",
+      "patient": "DEMO-004",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-004-D0-S7-1",
+      "bundle": "DEMO-004-D0-S7",
+      "patient": "DEMO-004",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 8,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-005-D0-S0-0",
+      "bundle": "DEMO-005-D0-S0",
+      "patient": "DEMO-005",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-006-D0-S2-0",
+      "bundle": "DEMO-006-D0-S2",
+      "patient": "DEMO-006",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-007-D0-S5-0",
+      "bundle": "DEMO-007-D0-S5",
+      "patient": "DEMO-007",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-008-D0-S7-0",
+      "bundle": "DEMO-008-D0-S7",
+      "patient": "DEMO-008",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-009-D1-S0-0",
+      "bundle": "DEMO-009-D1-S0",
+      "patient": "DEMO-009",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-009-D1-S0-1",
+      "bundle": "DEMO-009-D1-S0",
+      "patient": "DEMO-009",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-009-D3-S0-0",
+      "bundle": "DEMO-009-D3-S0",
+      "patient": "DEMO-009",
+      "therapy": "Speech",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-009-D3-S0-1",
+      "bundle": "DEMO-009-D3-S0",
+      "patient": "DEMO-009",
+      "therapy": "Occupational Therapy",
+      "day_offset": 3,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-010-D1-S2-0",
+      "bundle": "DEMO-010-D1-S2",
+      "patient": "DEMO-010",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-010-D1-S2-1",
+      "bundle": "DEMO-010-D1-S2",
+      "patient": "DEMO-010",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 3,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-011-D2-S5-0",
+      "bundle": "DEMO-011-D2-S5",
+      "patient": "DEMO-011",
+      "therapy": "Speech",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-011-D2-S5-1",
+      "bundle": "DEMO-011-D2-S5",
+      "patient": "DEMO-011",
+      "therapy": "Occupational Therapy",
+      "day_offset": 2,
+      "slot": 6,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-015-D1-S0-0",
+      "bundle": "DEMO-015-D1-S0",
+      "patient": "DEMO-015",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-015-D3-S0-0",
+      "bundle": "DEMO-015-D3-S0",
+      "patient": "DEMO-015",
+      "therapy": "Physiotherapy",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-016-D1-S2-0",
+      "bundle": "DEMO-016-D1-S2",
+      "patient": "DEMO-016",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-017-D2-S5-0",
+      "bundle": "DEMO-017-D2-S5",
+      "patient": "DEMO-017",
+      "therapy": "Physiotherapy",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-021-D0-S0-0",
+      "bundle": "DEMO-021-D0-S0",
+      "patient": "DEMO-021",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-021-D0-S0-1",
+      "bundle": "DEMO-021-D0-S0",
+      "patient": "DEMO-021",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 1,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-022-D0-S2-0",
+      "bundle": "DEMO-022-D0-S2",
+      "patient": "DEMO-022",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-022-D0-S2-1",
+      "bundle": "DEMO-022-D0-S2",
+      "patient": "DEMO-022",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 3,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-023-D0-S5-0",
+      "bundle": "DEMO-023-D0-S5",
+      "patient": "DEMO-023",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-023-D0-S5-1",
+      "bundle": "DEMO-023-D0-S5",
+      "patient": "DEMO-023",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 6,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-024-D0-S7-0",
+      "bundle": "DEMO-024-D0-S7",
+      "patient": "DEMO-024",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-024-D0-S7-1",
+      "bundle": "DEMO-024-D0-S7",
+      "patient": "DEMO-024",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 8,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-025-D0-S0-0",
+      "bundle": "DEMO-025-D0-S0",
+      "patient": "DEMO-025",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-026-D0-S2-0",
+      "bundle": "DEMO-026-D0-S2",
+      "patient": "DEMO-026",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-027-D0-S5-0",
+      "bundle": "DEMO-027-D0-S5",
+      "patient": "DEMO-027",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-028-D0-S7-0",
+      "bundle": "DEMO-028-D0-S7",
+      "patient": "DEMO-028",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-029-D1-S0-0",
+      "bundle": "DEMO-029-D1-S0",
+      "patient": "DEMO-029",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-029-D1-S0-1",
+      "bundle": "DEMO-029-D1-S0",
+      "patient": "DEMO-029",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-029-D3-S0-0",
+      "bundle": "DEMO-029-D3-S0",
+      "patient": "DEMO-029",
+      "therapy": "Speech",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-029-D3-S0-1",
+      "bundle": "DEMO-029-D3-S0",
+      "patient": "DEMO-029",
+      "therapy": "Occupational Therapy",
+      "day_offset": 3,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-030-D1-S2-0",
+      "bundle": "DEMO-030-D1-S2",
+      "patient": "DEMO-030",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-030-D1-S2-1",
+      "bundle": "DEMO-030-D1-S2",
+      "patient": "DEMO-030",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 3,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-031-D2-S5-0",
+      "bundle": "DEMO-031-D2-S5",
+      "patient": "DEMO-031",
+      "therapy": "Speech",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-031-D2-S5-1",
+      "bundle": "DEMO-031-D2-S5",
+      "patient": "DEMO-031",
+      "therapy": "Occupational Therapy",
+      "day_offset": 2,
+      "slot": 6,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-035-D1-S0-0",
+      "bundle": "DEMO-035-D1-S0",
+      "patient": "DEMO-035",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-035-D3-S0-0",
+      "bundle": "DEMO-035-D3-S0",
+      "patient": "DEMO-035",
+      "therapy": "Physiotherapy",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-036-D1-S2-0",
+      "bundle": "DEMO-036-D1-S2",
+      "patient": "DEMO-036",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-037-D2-S5-0",
+      "bundle": "DEMO-037-D2-S5",
+      "patient": "DEMO-037",
+      "therapy": "Physiotherapy",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-041-D0-S0-0",
+      "bundle": "DEMO-041-D0-S0",
+      "patient": "DEMO-041",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-041-D0-S0-1",
+      "bundle": "DEMO-041-D0-S0",
+      "patient": "DEMO-041",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 1,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-042-D0-S2-0",
+      "bundle": "DEMO-042-D0-S2",
+      "patient": "DEMO-042",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-042-D0-S2-1",
+      "bundle": "DEMO-042-D0-S2",
+      "patient": "DEMO-042",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 3,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-043-D0-S5-0",
+      "bundle": "DEMO-043-D0-S5",
+      "patient": "DEMO-043",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-043-D0-S5-1",
+      "bundle": "DEMO-043-D0-S5",
+      "patient": "DEMO-043",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 6,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-044-D0-S7-0",
+      "bundle": "DEMO-044-D0-S7",
+      "patient": "DEMO-044",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-044-D0-S7-1",
+      "bundle": "DEMO-044-D0-S7",
+      "patient": "DEMO-044",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 8,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-045-D0-S0-0",
+      "bundle": "DEMO-045-D0-S0",
+      "patient": "DEMO-045",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-046-D0-S2-0",
+      "bundle": "DEMO-046-D0-S2",
+      "patient": "DEMO-046",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-047-D0-S5-0",
+      "bundle": "DEMO-047-D0-S5",
+      "patient": "DEMO-047",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-048-D0-S7-0",
+      "bundle": "DEMO-048-D0-S7",
+      "patient": "DEMO-048",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-049-D1-S0-0",
+      "bundle": "DEMO-049-D1-S0",
+      "patient": "DEMO-049",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-049-D1-S0-1",
+      "bundle": "DEMO-049-D1-S0",
+      "patient": "DEMO-049",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-049-D3-S0-0",
+      "bundle": "DEMO-049-D3-S0",
+      "patient": "DEMO-049",
+      "therapy": "Speech",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-049-D3-S0-1",
+      "bundle": "DEMO-049-D3-S0",
+      "patient": "DEMO-049",
+      "therapy": "Occupational Therapy",
+      "day_offset": 3,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-050-D1-S2-0",
+      "bundle": "DEMO-050-D1-S2",
+      "patient": "DEMO-050",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-050-D1-S2-1",
+      "bundle": "DEMO-050-D1-S2",
+      "patient": "DEMO-050",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 3,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-051-D2-S5-0",
+      "bundle": "DEMO-051-D2-S5",
+      "patient": "DEMO-051",
+      "therapy": "Speech",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-051-D2-S5-1",
+      "bundle": "DEMO-051-D2-S5",
+      "patient": "DEMO-051",
+      "therapy": "Occupational Therapy",
+      "day_offset": 2,
+      "slot": 6,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-055-D1-S0-0",
+      "bundle": "DEMO-055-D1-S0",
+      "patient": "DEMO-055",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-055-D3-S0-0",
+      "bundle": "DEMO-055-D3-S0",
+      "patient": "DEMO-055",
+      "therapy": "Physiotherapy",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-056-D1-S2-0",
+      "bundle": "DEMO-056-D1-S2",
+      "patient": "DEMO-056",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-057-D2-S5-0",
+      "bundle": "DEMO-057-D2-S5",
+      "patient": "DEMO-057",
+      "therapy": "Physiotherapy",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-061-D0-S0-0",
+      "bundle": "DEMO-061-D0-S0",
+      "patient": "DEMO-061",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-061-D0-S0-1",
+      "bundle": "DEMO-061-D0-S0",
+      "patient": "DEMO-061",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 1,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-062-D0-S2-0",
+      "bundle": "DEMO-062-D0-S2",
+      "patient": "DEMO-062",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-062-D0-S2-1",
+      "bundle": "DEMO-062-D0-S2",
+      "patient": "DEMO-062",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 3,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-063-D0-S5-0",
+      "bundle": "DEMO-063-D0-S5",
+      "patient": "DEMO-063",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-063-D0-S5-1",
+      "bundle": "DEMO-063-D0-S5",
+      "patient": "DEMO-063",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 6,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-064-D0-S7-0",
+      "bundle": "DEMO-064-D0-S7",
+      "patient": "DEMO-064",
+      "therapy": "Speech",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-064-D0-S7-1",
+      "bundle": "DEMO-064-D0-S7",
+      "patient": "DEMO-064",
+      "therapy": "Occupational Therapy",
+      "day_offset": 0,
+      "slot": 8,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-065-D0-S0-0",
+      "bundle": "DEMO-065-D0-S0",
+      "patient": "DEMO-065",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 0,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-066-D0-S2-0",
+      "bundle": "DEMO-066-D0-S2",
+      "patient": "DEMO-066",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 2,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-067-D0-S5-0",
+      "bundle": "DEMO-067-D0-S5",
+      "patient": "DEMO-067",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 5,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-068-D0-S7-0",
+      "bundle": "DEMO-068-D0-S7",
+      "patient": "DEMO-068",
+      "therapy": "Physiotherapy",
+      "day_offset": 0,
+      "slot": 7,
+      "status": "PENDING_CONFIRMATION"
+    },
+    {
+      "key": "DEMO-069-D1-S0-0",
+      "bundle": "DEMO-069-D1-S0",
+      "patient": "DEMO-069",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-069-D1-S0-1",
+      "bundle": "DEMO-069-D1-S0",
+      "patient": "DEMO-069",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-069-D3-S0-0",
+      "bundle": "DEMO-069-D3-S0",
+      "patient": "DEMO-069",
+      "therapy": "Speech",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-069-D3-S0-1",
+      "bundle": "DEMO-069-D3-S0",
+      "patient": "DEMO-069",
+      "therapy": "Occupational Therapy",
+      "day_offset": 3,
+      "slot": 1,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-070-D1-S2-0",
+      "bundle": "DEMO-070-D1-S2",
+      "patient": "DEMO-070",
+      "therapy": "Speech",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-070-D1-S2-1",
+      "bundle": "DEMO-070-D1-S2",
+      "patient": "DEMO-070",
+      "therapy": "Occupational Therapy",
+      "day_offset": 1,
+      "slot": 3,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-071-D2-S5-0",
+      "bundle": "DEMO-071-D2-S5",
+      "patient": "DEMO-071",
+      "therapy": "Speech",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-071-D2-S5-1",
+      "bundle": "DEMO-071-D2-S5",
+      "patient": "DEMO-071",
+      "therapy": "Occupational Therapy",
+      "day_offset": 2,
+      "slot": 6,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-075-D1-S0-0",
+      "bundle": "DEMO-075-D1-S0",
+      "patient": "DEMO-075",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-075-D3-S0-0",
+      "bundle": "DEMO-075-D3-S0",
+      "patient": "DEMO-075",
+      "therapy": "Physiotherapy",
+      "day_offset": 3,
+      "slot": 0,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-076-D1-S2-0",
+      "bundle": "DEMO-076-D1-S2",
+      "patient": "DEMO-076",
+      "therapy": "Physiotherapy",
+      "day_offset": 1,
+      "slot": 2,
+      "status": "CONFIRMED"
+    },
+    {
+      "key": "DEMO-077-D2-S5-0",
+      "bundle": "DEMO-077-D2-S5",
+      "patient": "DEMO-077",
+      "therapy": "Physiotherapy",
+      "day_offset": 2,
+      "slot": 5,
+      "status": "CONFIRMED"
+    }
+  ],
+  "responses": [
+    {
+      "event_id": "large-DEMO-001",
+      "appointment": "DEMO-001-D0-S0-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-002",
+      "appointment": "DEMO-002-D0-S2-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-004",
+      "appointment": "DEMO-004-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-005",
+      "appointment": "DEMO-005-D0-S0-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-007",
+      "appointment": "DEMO-007-D0-S5-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-008",
+      "appointment": "DEMO-008-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-021",
+      "appointment": "DEMO-021-D0-S0-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-022",
+      "appointment": "DEMO-022-D0-S2-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-024",
+      "appointment": "DEMO-024-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-025",
+      "appointment": "DEMO-025-D0-S0-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-027",
+      "appointment": "DEMO-027-D0-S5-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-028",
+      "appointment": "DEMO-028-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-041",
+      "appointment": "DEMO-041-D0-S0-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-042",
+      "appointment": "DEMO-042-D0-S2-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-044",
+      "appointment": "DEMO-044-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-045",
+      "appointment": "DEMO-045-D0-S0-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-047",
+      "appointment": "DEMO-047-D0-S5-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-048",
+      "appointment": "DEMO-048-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-061",
+      "appointment": "DEMO-061-D0-S0-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-062",
+      "appointment": "DEMO-062-D0-S2-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-064",
+      "appointment": "DEMO-064-D0-S7-0",
+      "reply": "YES"
+    },
+    {
+      "event_id": "large-DEMO-065",
+      "appointment": "DEMO-065-D0-S0-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-067",
+      "appointment": "DEMO-067-D0-S5-0",
+      "reply": "NO",
+      "unavailable_scope": "day"
+    },
+    {
+      "event_id": "large-DEMO-068",
+      "appointment": "DEMO-068-D0-S7-0",
+      "reply": "YES"
+    }
+  ],
+  "patient_unavailable": [
+    {
+      "patient": "DEMO-075",
+      "weekday": 0,
+      "slot": 5
+    },
+    {
+      "patient": "DEMO-076",
+      "weekday": 0,
+      "slot": 5
+    },
+    {
+      "patient": "DEMO-077",
+      "weekday": 0,
+      "slot": 5
+    },
+    {
+      "patient": "DEMO-078",
+      "weekday": 0,
+      "slot": 5
+    },
+    {
+      "patient": "DEMO-079",
+      "weekday": 0,
+      "slot": 5
+    },
+    {
+      "patient": "DEMO-080",
+      "weekday": 0,
+      "slot": 5
+    }
+  ]
+}

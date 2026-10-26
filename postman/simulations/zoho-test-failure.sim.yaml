@@ -1,0 +1,9 @@
+simulation: zoho-test-unavailable
+routing: path
+mocks:
+  - routeKey: zoho
+    path: ../mocks/zoho-test/config.yaml
+    scenarios:
+      - overrides:
+          conditions:
+            error: { status_code: 503 }

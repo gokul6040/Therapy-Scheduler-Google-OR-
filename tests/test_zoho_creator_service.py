@@ -194,3 +194,32 @@ def test_get_report_records_reads_creator_report(monkeypatch):
     assert "max_records=1000" in captured["url"]
     assert captured["auth"] == "Zoho-oauthtoken token"
     assert captured["timeout"] == 60
+
+
+def test_report_criteria_is_encoded_and_no_matching_rows_is_success(monkeypatch):
+    from io import BytesIO
+    from urllib.error import HTTPError
+    from urllib.parse import parse_qs, urlsplit
+
+    criteria = "Modified_Time >= '22-Oct-2026 03:00:00'"
+    def empty(request, timeout):
+        assert parse_qs(urlsplit(request.full_url).query)["criteria"] == [criteria]
+        raise HTTPError(request.full_url, 400, "Bad Request", {}, BytesIO(
+            json.dumps({"code": 9280, "message": "No records found matching the given criteria."}).encode()))
+    monkeypatch.setattr("services.zoho_creator_service.open_zoho_request", empty)
+    assert get_report_records(settings_from_environment(), "fake-token", "Plan_Report", criteria=criteria) == []
+
+
+def test_report_repeated_cursor_cannot_succeed_with_partial_data(monkeypatch):
+    import pytest
+    class Response:
+        headers = {"record_cursor": "same-cursor"}
+        def read(self):
+            return json.dumps({"code": 3000, "data": [{"ID": "1"}]}).encode()
+        def __enter__(self):
+            return self
+        def __exit__(self, *_):
+            return False
+    monkeypatch.setattr("services.zoho_creator_service.open_zoho_request", lambda *_args, **_kwargs: Response())
+    with pytest.raises(ValueError, match="repeated a pagination cursor"):
+        get_report_records(settings_from_environment(), "fake-token", "Plan_Report")

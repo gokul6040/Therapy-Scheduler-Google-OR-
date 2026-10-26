@@ -1,0 +1,10 @@
+{
+  "TEST-A": {"name": "", "phone": "", "consent": false},
+  "TEST-B": {"name": "", "phone": "", "consent": false},
+  "TEST-C": {"name": "", "phone": "", "consent": false},
+  "TEST-D": {"name": "", "phone": "", "consent": false},
+  "TEST-E": {"name": "", "phone": "", "consent": false},
+  "TEST-F": {"name": "", "phone": "", "consent": false},
+  "TEST-G": {"name": "", "phone": "", "consent": false},
+  "TEST-H": {"name": "", "phone": "", "consent": false}
+}

@@ -16,4 +16,14 @@ This file contains only decisions that still need management confirmation. When 
 
 13. **Manual lock duration:** Should an administrator's manual change remain locked until explicitly unlocked? Recommended: yes.
 
-14. **Family approval:** Which proposed changes require family confirmation before saving: time changes, day changes, therapist substitutions, or all three?
+14. **Automatic changes and family approval:** Which changes initiated by the system
+    require family confirmation before saving? Explicit local admin reservations
+    without messaging are confirmed immediately, with warning overrides permitted
+    by R-28; that decision does not authorize automatic changes by the solver.
+    Separately, R-31 now records the user's approved manual-cutoff treatment of
+    sent unanswered offers; that does not resolve the policy for other automatic changes.
+
+15. **Source plan/patient deactivation:** Which Zoho field or explicit action means
+    a patient or plan has stopped, and what should staff do with existing future
+    bookings? Missing rows in an incremental pull are not deletions. Do not infer
+    cancellation or erase completed progress from a missing source record.

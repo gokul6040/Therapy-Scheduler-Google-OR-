@@ -34,6 +34,7 @@
     <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6L12 3Z"/><path d="m19 14 .8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14ZM5 15l.6 1.4L7 17l-1.4.6L5 19l-.6-1.4L3 17l1.4-.6L5 15Z"/></symbol>
   </svg>
 
   <div class="app-shell">
@@ -87,7 +88,7 @@
             </div>
             <div class="heading-actions">
               <button class="secondary-button" id="filterButton"><svg><use href="#i-filter"/></svg>Filters <span class="filter-count" id="filterCount" hidden>0</span></button>
-              <button class="primary-button" data-view-link="generator"><svg><use href="#i-plus"/></svg>Plan next 14 days</button>
+              <button class="primary-button" data-view-link="generator" data-planning-label><svg><use href="#i-plus"/></svg><span>Plan next 14 days</span></button>
             </div>
           </div>
 
@@ -108,7 +109,7 @@
             </div>
             <div class="view-switcher" role="group" aria-label="Calendar view">
               <button data-calendar-view="day" class="active">Day</button>
-              <button data-calendar-view="week">Week</button>
+              <button data-calendar-view="week" title="Monday through Saturday operational week">Mon–Sat</button>
               <button data-calendar-view="agenda">Agenda</button>
             </div>
           </div>
@@ -154,6 +155,7 @@
 
   <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
   <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="/whatsapp_controls.js" defer></script>
   <script src="/app.js" defer></script>
 </body>
 </html>

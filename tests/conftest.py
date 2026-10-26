@@ -1,4 +1,6 @@
 from datetime import date
+import json
+from pathlib import Path
 
 import pytest
 from sqlalchemy import create_engine
@@ -6,6 +8,20 @@ from sqlalchemy.orm import sessionmaker
 
 from database.db import Base
 from scheduling.types import RequirementInput, SchedulingProblem
+
+
+@pytest.fixture
+def legacy_flow_scenario():
+    """Keep the original four-child regression cases independent of newer demos."""
+    path = Path(__file__).parent / "fixtures" / "flow_scenario_v1.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+@pytest.fixture
+def fixed_eight_flow_scenario():
+    """Retain the earlier deliberately constrained replacement regression cases."""
+    path = Path(__file__).parent / "fixtures" / "flow_scenario_v2.json"
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 @pytest.fixture

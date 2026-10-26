@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malaparamba · Daily flow test</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header><div><span class="eyebrow">THANAL EIC · FICTIONAL DATA</span><h1>Daily flow test</h1>
+<p>Schedule → review → WhatsApp → replies → replacements → attendance</p></div><span id="mode" class="badge">Connecting…</span></header>
+<main>
+<section class="toolbar"><label>Planning date <input id="date" type="date"></label>
+<button id="generate">1 · Generate daily draft</button><button id="publish">2 · Publish proposed visits</button>
+<button id="process" class="secondary">Process preview queue</button><button id="refresh" class="secondary">Refresh</button></section>
+<p id="notice" role="status">Open this page using the private admin URL printed by the launcher.</p>
+<section><h2>Inputs & test recipients</h2><p>40-minute sessions from the existing scheduler. The fixture uses 09:00–10:20, two therapists, and capacity two. Select the initial roster; D starts as the standby replacement.</p>
+<div id="inputs" class="cards"></div><p class="muted">Edit recipients.local.json and restart to change coworker bindings. Each fictional child can map to a coworker; one coworker can represent multiple children.</p></section>
+<section><h2>3 · Review appointments</h2><p>Proposed replacements reserve their slots, but need admin approval through “Offer this visit”. Pending visits stay reserved until an explicit decline or admin release.</p><div id="appointments"></div></section>
+<section><h2>4 · Parent offers & replies</h2><p id="replyHelp"></p><div id="offers" class="cards"></div></section>
+<section><h2>5 · Weekly therapy progress</h2><p>Completed is delivered therapy. Booked includes proposed, pending and confirmed sessions. Remaining = target − completed − booked.</p><div id="progress"></div></section>
+<div class="columns"><section><h2>Admin inbox</h2><div id="inbox"></div></section>
+<section><h2>Durable queue</h2><div id="jobs"></div></section></div>
+<section><h2>Recent audit history</h2><div id="audit"></div></section>
+<footer>Isolated test workspace · No Zoho writes · Preview and live use separate databases · Times are Indian Standard Time</footer>
+</main><script src="/app.js"></script></body></html>

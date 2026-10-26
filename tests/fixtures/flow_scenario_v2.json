@@ -1,0 +1,27 @@
+{
+  "version": "malaparamba-fictional-v2",
+  "centre": "Malaparamba EIC — FICTIONAL TEST",
+  "capacity": 2,
+  "therapists": [
+    {"code": "TEST-ANU", "name": "Test Therapist Anu", "therapy": "Speech", "slots": [0, 1, 2, 3]},
+    {"code": "TEST-RAVI", "name": "Test Therapist Ravi", "therapy": "OT", "slots": [0, 1, 2, 3]}
+  ],
+  "patients": [
+    {"code": "TEST-A", "name": "Fictional Child A", "slots": [0, 1], "initial_roster": true,
+      "requirements": [{"therapy": "Speech", "therapist": "TEST-ANU", "weekly": 3}, {"therapy": "OT", "therapist": "TEST-RAVI", "weekly": 2}]},
+    {"code": "TEST-B", "name": "Fictional Child B", "slots": [1], "initial_roster": true,
+      "requirements": [{"therapy": "Speech", "therapist": "TEST-ANU", "weekly": 2}]},
+    {"code": "TEST-C", "name": "Fictional Child C", "slots": [0], "initial_roster": true,
+      "requirements": [{"therapy": "OT", "therapist": "TEST-RAVI", "weekly": 2}]},
+    {"code": "TEST-D", "name": "Fictional Child D", "slots": [1], "initial_roster": false,
+      "requirements": [{"therapy": "Speech", "therapist": "TEST-ANU", "weekly": 2}]},
+    {"code": "TEST-E", "name": "Fictional Child E", "slots": [2, 3], "initial_roster": true,
+      "requirements": [{"therapy": "Speech", "therapist": "TEST-ANU", "weekly": 2}, {"therapy": "OT", "therapist": "TEST-RAVI", "weekly": 2}]},
+    {"code": "TEST-F", "name": "Fictional Child F", "slots": [3], "initial_roster": true,
+      "requirements": [{"therapy": "Speech", "therapist": "TEST-ANU", "weekly": 2}]},
+    {"code": "TEST-G", "name": "Fictional Child G", "slots": [2], "initial_roster": true,
+      "requirements": [{"therapy": "OT", "therapist": "TEST-RAVI", "weekly": 2}]},
+    {"code": "TEST-H", "name": "Fictional Child H", "slots": [3], "initial_roster": false,
+      "requirements": [{"therapy": "Speech", "therapist": "TEST-ANU", "weekly": 2}]}
+  ]
+}

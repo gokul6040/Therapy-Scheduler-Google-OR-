@@ -1,0 +1,5 @@
+simulation: zoho-test-import
+routing: path
+mocks:
+  - routeKey: zoho
+    path: ../mocks/zoho-test/config.yaml

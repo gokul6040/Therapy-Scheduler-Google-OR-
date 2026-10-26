@@ -3,10 +3,11 @@ from __future__ import annotations
 import enum
 from datetime import date, datetime
 
-from sqlalchemy import Boolean, Date, DateTime, Enum, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, Computed, Date, DateTime, Enum, ForeignKey, Integer, String, Text, UniqueConstraint, literal_column
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from database.db import Base
+from database.whatsapp_time import KolkataTimestamp, KolkataWallTime, WHATSAPP_TIME_ZONE, kolkata_now
 
 
 class AppointmentStatus(str, enum.Enum):
@@ -177,6 +178,32 @@ class ZohoAppointmentSync(Base):
     synced_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 
+class AdminBookingDecision(Base):
+    """Idempotent local admin decision, including acknowledged warning details."""
+
+    __tablename__ = "admin_booking_decisions"
+    request_id: Mapped[str] = mapped_column(String(120), primary_key=True)
+    fingerprint: Mapped[str] = mapped_column(String(64))
+    appointment_ids: Mapped[str] = mapped_column(Text)
+    warnings: Mapped[str] = mapped_column(Text)
+    admin_user: Mapped[str] = mapped_column(String(80))
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class AdminSlotReservation(Base):
+    """Tie each released opening to its explicit confirmed admin reservation."""
+
+    __tablename__ = "admin_slot_reservations"
+    source_appointment_id: Mapped[int] = mapped_column(
+        ForeignKey("appointments.id"), primary_key=True,
+    )
+    appointment_id: Mapped[int] = mapped_column(
+        ForeignKey("appointments.id"), unique=True,
+    )
+    decision_id: Mapped[str] = mapped_column(ForeignKey("admin_booking_decisions.request_id"))
+    counts_toward_requirement: Mapped[bool] = mapped_column(Boolean, default=True)
+
+
 class WaitlistEntry(Base):
     __tablename__ = "waitlist_entries"
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -204,6 +231,59 @@ class AuditLog(Base):
     old_value: Mapped[str | None] = mapped_column(Text)
     new_value: Mapped[str | None] = mapped_column(Text)
     user: Mapped[str] = mapped_column(String(80), default="scheduler_manager")
+
+
+class WhatsAppButtonClick(Base):
+    """Retain authenticated reply-button clicks independently of the reply queue."""
+
+    __tablename__ = "whatsapp_button_clicks"
+    event_key: Mapped[str] = mapped_column(String(64), primary_key=True)
+    message_id: Mapped[str] = mapped_column(String(512))
+    phone_number_id: Mapped[str] = mapped_column(String(20))
+    user_name: Mapped[str | None] = mapped_column(String(512))
+    phone_number: Mapped[str] = mapped_column(String(20), index=True)
+    clicked_button: Mapped[str] = mapped_column(String(512))
+    button_payload: Mapped[str | None] = mapped_column(Text)
+    clicked_at: Mapped[datetime] = mapped_column(KolkataTimestamp(), index=True)
+    recorded_at: Mapped[datetime] = mapped_column(KolkataTimestamp(), default=kolkata_now)
+    time_zone: Mapped[str] = mapped_column(
+        String(64), default=WHATSAPP_TIME_ZONE, server_default=WHATSAPP_TIME_ZONE,
+    )
+    clicked_at_ist: Mapped[datetime] = mapped_column(
+        DateTime, Computed(KolkataWallTime(literal_column("clicked_at")), persisted=True),
+    )
+    recorded_at_ist: Mapped[datetime] = mapped_column(
+        DateTime, Computed(KolkataWallTime(literal_column("recorded_at")), persisted=True),
+    )
+
+
+class WhatsAppHelpReply(Base):
+    """Deduplicate Help callbacks and retain the recipient only while replying."""
+
+    __tablename__ = "whatsapp_help_replies"
+    event_key: Mapped[str] = mapped_column(String(64), primary_key=True)
+    recipient: Mapped[str | None] = mapped_column(String(20))
+    received_at: Mapped[datetime] = mapped_column(DateTime)
+    state: Mapped[str] = mapped_column(String(20), default="pending", index=True)
+
+
+class ParentAvailabilityResponse(Base):
+    """An assumed parent reply tied to a snapshot of one booked visit.
+
+    Simulation data uses this table directly; no WhatsApp integration is needed.
+    A No reply must explicitly identify visit-time or whole-day unavailability.
+    """
+
+    __tablename__ = "parent_availability_responses"
+    event_id: Mapped[str] = mapped_column(String(120), primary_key=True)
+    appointment_id: Mapped[int] = mapped_column(ForeignKey("appointments.id"), index=True)
+    appointment_date: Mapped[date] = mapped_column(Date, index=True)
+    appointment_slot: Mapped[int] = mapped_column(Integer)
+    reply: Mapped[str] = mapped_column(String(3))
+    unavailable_scope: Mapped[str | None] = mapped_column(String(10))
+    source: Mapped[str] = mapped_column(String(30), default="simulation")
+    recorded_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    processed_at: Mapped[datetime | None] = mapped_column(DateTime)
 
 
 class PlanDetailSource(Base):

@@ -2,6 +2,14 @@
 .env
 .env.*
 !.env.example
+*.local
+*.local.*
+secrets/
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
 
 # Python environments, build, and test artifacts
 .venv/
@@ -19,18 +27,39 @@ htmlcov/
 .ruff_cache/
 .tox/
 .nox/
+.hypothesis/
+*.egg
 *.egg-info/
 build/
 dist/
 
 # Application-generated data and exports (may contain sensitive information)
 outputs/
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
 *.db-journal
 *.db-wal
 *.db-shm
 *.sqlite-journal
 *.sqlite-wal
 *.sqlite-shm
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+*.log
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# Local reference document; maintain project documentation in Markdown
+/Therapy_Scheduler_OR_Tools_Management_Overview.docx
 
 # Editor and operating-system files
 .vscode/
@@ -38,9 +67,25 @@ outputs/
 *.code-workspace
 .DS_Store
 Thumbs.db
+Desktop.ini
+~$*
+*.swp
+*.swo
 
 # Local Codex and diagnostic artifacts
 .codex_tmp/
+.codex/
+.agents/
+.impeccable/
 .deepeval/
 .pytest-codex-run/
 .pytest-tmp/
+
+# Isolated coworker WhatsApp test contacts and databases
+flow_test/recipients.local.json
+flow_test/data/
+
+# Standalone Zoho downloader output (may contain personal data)
+/zoho_records.json
+/examples/zoho_records.json
+/examples/records.json

@@ -35,6 +35,10 @@ def placement_rejection_reason(
             return "PATIENT_AVAILABILITY"
         if (bundle.patient_id, target_date, slot) in problem.patient_absences:
             return "PATIENT_ABSENCE"
+        if problem.new_booking_slots is not None and (
+            therapist_ids[offset], item.department_id, item.location_id, target_date, slot
+        ) not in problem.new_booking_slots:
+            return "OUTSIDE_REPAIR_OPENING"
         if check_therapists:
             therapist_id = therapist_ids[offset]
             if therapist_id not in problem.active_therapists:

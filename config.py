@@ -25,6 +25,19 @@ def load_local_env_file(path: Path) -> None:
         os.environ.setdefault(key, value)
 
 
+def environment_value(name: str, default: str) -> str:
+    """Return an environment value, accepting optional surrounding quotes.
+
+    Docker's ``--env-file`` preserves quotation marks that the local ``.env``
+    loader intentionally removes. Normalising here keeps connection strings
+    portable between the local server and the Linux container.
+    """
+    value = os.environ.get(name, default).strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+        return value[1:-1]
+    return value
+
+
 # ``.env`` is a convenient local-development secret store.  It is ignored by
 # Git; deployed environments should set the same values through their secret
 # manager instead.
@@ -34,7 +47,7 @@ load_local_env_file(BASE_DIR / ".env")
 # repository. Keep SQLite as the safe local fallback until PostgreSQL credentials
 # are provisioned. Never commit credentials or an Azure connection string.
 LOCAL_DATABASE_URL = f"sqlite:///{(BASE_DIR / 'eic_scheduler_sanitized.db').as_posix()}"
-DATABASE_URL = os.environ.get("THERAPY_SCHEDULER_DATABASE_URL", LOCAL_DATABASE_URL)
+DATABASE_URL = environment_value("THERAPY_SCHEDULER_DATABASE_URL", LOCAL_DATABASE_URL)
 SOURCE_WORKBOOK = BASE_DIR / "therapy_schedule_sanitized_cleaned.xlsx"
 DEMO_USER = "demo_manager"
 # The operational schedule is one calendar week: Monday through Saturday.
@@ -65,3 +78,7 @@ class SolverSettings:
 
 
 SOLVER_SETTINGS = SolverSettings()
+# The large response demo exercises CP-SAT rather than the >=100-input quick pass.
+RESPONSE_DEMO_SOLVER_SETTINGS = SolverSettings(max_time_seconds=30.0)
+# Isolated coworker flow uses a tiny deterministic fictional input.
+FLOW_TEST_SOLVER_SETTINGS = SolverSettings(max_time_seconds=5.0)

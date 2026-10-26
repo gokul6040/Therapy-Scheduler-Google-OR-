@@ -1,0 +1,10 @@
+.test-workspace-marker{margin-bottom:20px;padding:12px 16px;color:var(--amber-700);background:var(--amber-100);border:1px solid #e8d5ac;border-radius:var(--radius-sm);font-size:.8rem;font-weight:600;letter-spacing:.02em}
+.test-workspace-login{width:min(440px,calc(100vw - 32px));padding:28px;border:1px solid var(--ink-150);border-radius:var(--radius-lg);color:var(--ink-900);box-shadow:var(--shadow-lg)}
+.test-workspace-login::backdrop{background:rgba(17,27,53,.35)}
+.test-workspace-login h2{margin-bottom:12px}.test-workspace-login p{color:var(--ink-600);font-size:.85rem;line-height:1.6}.test-workspace-login label{display:grid;gap:8px;font-size:.85rem}.test-workspace-login input{padding:12px;border:1px solid var(--ink-200);border-radius:var(--radius-sm)}
+#testLoginError{color:var(--red-700)}
+.zoho-export-dialog{width:min(560px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto}
+.zoho-export-dialog [data-zoho-notice]{margin:16px 0}
+.zoho-export-dialog .wa-actions{justify-content:flex-end;flex-wrap:wrap;margin-top:24px}
+.zoho-export-dialog button:focus-visible{outline:2px solid var(--ink-900);outline-offset:3px}
+.zoho-export-dialog [hidden]{display:none}

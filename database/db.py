@@ -21,6 +21,17 @@ def init_db() -> None:
     from database import models  # noqa: F401
 
     Base.metadata.create_all(engine)
+    from database.whatsapp_migrations import migrate_whatsapp_button_times
+
+    migrate_whatsapp_button_times(engine)
+
+
+def init_admin_booking_tables() -> None:
+    """Add only reservation tracking; leave existing records and schemas intact."""
+    from database.models import AdminBookingDecision, AdminSlotReservation
+
+    AdminBookingDecision.__table__.create(engine, checkfirst=True)
+    AdminSlotReservation.__table__.create(engine, checkfirst=True)
 
 
 def get_session():

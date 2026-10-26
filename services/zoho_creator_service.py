@@ -302,6 +302,7 @@ def get_report_records(
     settings: ZohoCreatorSettings,
     access_token: str,
     report_link_name: str,
+    *, criteria: str | None = None,
 ) -> list[dict[str, Any]]:
     """Read every record in one Creator report, following its cursor if needed."""
     endpoint = (
@@ -310,6 +311,10 @@ def get_report_records(
     )
     records: list[dict[str, Any]] = []
     cursor: str | None = None
+    seen_cursors: set[str] = set()
+    parameters = {"max_records": 1000, "field_config": "all"}
+    if criteria:
+        parameters["criteria"] = criteria
     while True:
         headers = {
             "Authorization": f"Zoho-oauthtoken {access_token}",
@@ -318,7 +323,7 @@ def get_report_records(
         if cursor:
             headers["record_cursor"] = cursor
         request = Request(
-            f"{endpoint}?{urlencode({'max_records': 1000, 'field_config': 'all'})}",
+            f"{endpoint}?{urlencode(parameters)}",
             method="GET",
             headers=headers,
         )
@@ -329,12 +334,17 @@ def get_report_records(
         except HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
             try:
-                message = json.loads(detail).get("message", detail)
+                error = json.loads(detail)
+                if criteria and error.get("code") in (3100, 9280) and not cursor:
+                    return []  # Valid filtered window with no matching records.
+                message = error.get("message", detail)
             except json.JSONDecodeError:
                 message = detail
             raise ValueError(f"Zoho rejected the report read: {message}") from exc
         except URLError as exc:
             raise ValueError("Zoho Creator could not be reached for the report read") from exc
+        if criteria and payload.get("code") in (3100, 9280) and not cursor:
+            return []
         if payload.get("code") not in (None, 3000):
             message = payload.get("message") or payload.get("error")
             if not message:
@@ -346,4 +356,7 @@ def get_report_records(
         records.extend(data)
         if not next_cursor:
             return records
+        if next_cursor in seen_cursors:
+            raise ValueError("Zoho repeated a pagination cursor; incomplete report read")
+        seen_cursors.add(next_cursor)
         cursor = next_cursor

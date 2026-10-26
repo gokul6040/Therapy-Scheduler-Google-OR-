@@ -114,7 +114,10 @@ def _candidate_placements(problem, bundles):
                     continue
                 preferred = tuple(options[0] for options in therapist_options)
                 candidates[bundle.id].append((day, start_slot, preferred))
-        candidates[bundle.id] = _diverse_daily_candidates(problem, bundle, candidates[bundle.id])
+        # A bounded daily/replacement run already limits the search space.
+        # Retain all valid starts so ID rotation cannot hide available slots.
+        if problem.new_booking_slots is None:
+            candidates[bundle.id] = _diverse_daily_candidates(problem, bundle, candidates[bundle.id])
     return candidates, rejected
 
 
@@ -333,6 +336,7 @@ def _week_bundles(problem: SchedulingProblem) -> tuple[list[TherapyBundle], int,
         if 0 <= day_offset < problem.horizon_days:
             pinned_counts[(item.requirement_id, day_offset // 7)] += 1
     bundles = []
+    used_bundle_ids = {item.bundle_id for item in problem.pinned}
     for period_index in range(period_count):
         remaining_requirements = [
             replace(
@@ -344,7 +348,14 @@ def _week_bundles(problem: SchedulingProblem) -> tuple[list[TherapyBundle], int,
             )
             for item in problem.requirements
         ]
-        bundles.extend(build_bundles(remaining_requirements, period_index))
+        for bundle in build_bundles(remaining_requirements, period_index):
+            identifier = bundle.id
+            suffix = 1
+            while identifier in used_bundle_ids:
+                identifier = f"{bundle.id}-N{suffix}"
+                suffix += 1
+            used_bundle_ids.add(identifier)
+            bundles.append(replace(bundle, id=identifier))
     requested = sum(item.sessions_per_week for item in problem.requirements) * period_count
     return bundles, requested, period_count
 

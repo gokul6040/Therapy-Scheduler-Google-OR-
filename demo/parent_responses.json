@@ -1,0 +1,22 @@
+{
+  "target_date": "2026-10-19",
+  "patients": [
+    {"code": "DEMO-A", "name": "Demo Patient A", "sessions_per_week": 3, "therapist": "DEMO-T1"},
+    {"code": "DEMO-B", "name": "Demo Patient B", "sessions_per_week": 2, "therapist": "DEMO-T1"},
+    {"code": "DEMO-C", "name": "Demo Patient C", "sessions_per_week": 1, "therapist": "DEMO-T1"},
+    {"code": "DEMO-D", "name": "Demo Patient D", "sessions_per_week": 2, "therapist": "DEMO-T1"},
+    {"code": "DEMO-E", "name": "Demo Patient E", "sessions_per_week": 1, "therapist": "DEMO-T1"},
+    {"code": "DEMO-F", "name": "Demo Patient F", "sessions_per_week": 1, "therapist": "DEMO-T2"}
+  ],
+  "appointments": [
+    {"key": "A-MON", "patient": "DEMO-A", "day_offset": 0, "slot": 0, "status": "PENDING_CONFIRMATION"},
+    {"key": "B-MON", "patient": "DEMO-B", "day_offset": 0, "slot": 1, "status": "PENDING_CONFIRMATION"},
+    {"key": "C-MON", "patient": "DEMO-C", "day_offset": 0, "slot": 2, "status": "PENDING_CONFIRMATION"},
+    {"key": "D-TUE", "patient": "DEMO-D", "day_offset": 1, "slot": 0, "status": "CONFIRMED"},
+    {"key": "E-TUE", "patient": "DEMO-E", "day_offset": 1, "slot": 1, "status": "CONFIRMED"}
+  ],
+  "responses": [
+    {"event_id": "demo-yes-a", "appointment": "A-MON", "reply": "YES"},
+    {"event_id": "demo-no-b", "appointment": "B-MON", "reply": "NO", "unavailable_scope": "day"}
+  ]
+}

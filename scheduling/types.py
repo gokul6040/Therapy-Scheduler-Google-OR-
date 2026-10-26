@@ -58,6 +58,8 @@ class SchedulingProblem:
     patient_absences: set[tuple[int, date, int]] = field(default_factory=set)
     planning_start_date: date | None = None
     priority_requirement_ids: set[int] = field(default_factory=set)
+    # Optional repair boundary for new placements; existing pinned visits stay fixed.
+    new_booking_slots: set[tuple[int, int, int, date, int]] | None = None
 
 
 @dataclass(frozen=True)
